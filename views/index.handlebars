@@ -28,6 +28,14 @@
 		</div>
 
 
+		<ol>
+		{{#each projects}}
+			<li><a href="#project{{id}}">{{name}}</a></li>
+		{{/each}}
+		</ol>
+
+
+
 		<h4>Projects</h4>
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
@@ -80,6 +88,15 @@
 				<p>Design tools</p>
 			</a>
 		</div>
+
+		{{#each projects}}
+		<div class ="project" id="{{id}}">
+			<a href="project/{{name}}" class="thumbnail">
+				<img src="images/{{image}}" class="img">
+				<p>{{name}}</p>
+			</a>
+		</div>
+		{{/each}}
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
